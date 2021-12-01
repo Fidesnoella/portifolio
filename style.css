@@ -1,0 +1,296 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color:#f5f6f6;
+    height: 100%;
+}
+/* Home page
+=========================================== */
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 72px;
+    background-color: white;
+    color: black;
+    
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+}
+nav li a:hover{
+    border-bottom: 2px solid #000000;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+   margin: 30px;
+   font-weight: bold;
+   font-size: 20px;
+}
+nav input{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    height: 35px;
+    width: 130px;
+    font-size: 20px;
+    cursor: pointer;
+}
+/* main */
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+main div{
+    padding-left: 20%;
+    padding-top: 5%;
+}
+main #p1{
+    font-size: 15px;
+}
+main #p2{
+    font-size: 20px;
+}
+main #p3{
+    font-size: 40px;
+    font-weight: bold;
+}
+main #p4{
+    font-size: 20px;
+   
+}
+ /* Footer  */
+ footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    position: fixed;
+    padding-left: 20%;
+    bottom: 0;
+} 
+.social-icons {
+    display: flex;
+ }
+ .social-icons a{
+     width: 30px;
+     height: 30px;
+   justify-content: center;
+   align-items: center;
+  margin: 20px;
+   border-radius: 10%;
+ }
+
+.social-icons a img:hover{
+    background-color: #645c5c;
+    transition: all ease 0.5s;
+}
+@media screen and (max-width:700px) {
+   nav{
+        width: fit-content;
+    }
+    main div{
+        padding-left: 10%;
+        padding-top: 10%;
+        min-width: 300px;
+    }
+    main #p1{
+        font-size: 10px;
+    }
+    main #p2{
+        font-size: 15px;
+    }
+    main #p3{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    main #p4{
+        font-size: 15px;
+       
+    }
+   main img{
+       width: 300;
+       height: 450;
+   }
+    
+}
+
+/* contact page 
+===========================================*/
+#h1{
+  margin-left: 40%;
+  margin-top: 50px;
+}
+.contact p{
+    padding-left: 40%;
+    font-size: 20px;
+   
+}
+.contact .p1{
+    margin-top: 70px;
+}
+
+.form{
+    display: flex;
+    flex-direction: row;
+    padding-left: 30%;
+    margin-top: 10px;
+}
+.form input{
+    margin: 10px;
+    border: 1px solid black;
+    width: 280px;
+    height: 40px;
+}
+.message textarea{
+   margin-top: 10px;
+   height: 160px;
+   width: 280px;
+   border: 1px solid black;
+}
+.form button{
+    width: 120px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    margin-left: 200px;
+    margin-top: 10px;
+}
+/* Sign up page 
+===========================================*/
+
+.text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.text h1{
+    margin-right: 45%;
+    font-size: 30px;
+    padding-top: 10px;
+}
+.text img{
+    padding-left: 20px;
+}
+.form1{
+    display: flex;
+    flex-direction: column;
+    padding-left: 35%;
+    margin-top: 60px;
+    
+}
+.form1 input,
+button{
+    width: 400px;
+    height: 40px;
+    margin: 8px;
+}
+.form1 button{
+    background-color: black;
+    color: white;
+    border: none;
+}
+@media screen and (max-device-width:700px){
+    html{
+        font-size: 50%;
+    }
+
+    .text{
+        justify-content: space-between;
+        margin: 30px;
+    }
+    .form1 input,
+    button{
+        width: 250px;
+        height: 30px;
+        margin: 4px;
+        padding-left: 0%;
+    }
+}
+
+/* Login 
+============================================================================== */
+/* .form2,
+form{
+    display: flex;
+    flex-direction:column;
+     background-color: chocolate;
+   /* margin-top: 80px;
+    margin-left: 230px;
+    height: 400px ;
+    width: 500px;
+    border-radius: 20px; */
+    /* margin: 40px 80px;
+}
+ */
+
+.form2,
+form{
+    background-color: white;
+    width: fit-content;
+    height: 400px;
+}
+main,
+.form2{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.formdata,
+ input{
+    width: 300px;
+    height: 40px;
+    border: 0;
+    border-bottom:1px solid #000 ;
+}
+.form2 input:focus{
+    outline: none;
+  }
+.form2 button{
+    width: 280px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    margin-right: 4px;
+}
+.form2 a{
+    color: #1877F2;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.form2 a #pass{
+    margin-top: 25px;
+}
+
+/* About me page
+==================================================================== */
+
+
+
+
