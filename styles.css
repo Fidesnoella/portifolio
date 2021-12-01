@@ -1,0 +1,218 @@
+
+/* Sign up page 
+===========================================*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color:#f5f6f6;
+    height: 100%;
+}
+
+.text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.text h1{
+    margin-right: 45%;
+    font-size: 30px;
+    padding-top: 10px;
+}
+.text img{
+    padding-left: 20px;
+}
+.form1{
+    display: flex;
+    flex-direction: column;
+    padding-left: 35%;
+    margin-top: 60px;
+    
+}
+.form1 input,
+.btn{
+    width: 400px;
+    height: 40px;
+    margin: 8px;
+}
+.form1
+.btn{
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+/* Login 
+============================================================================== */
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 72px;
+    background-color: white;
+    color: black;
+    
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+}
+nav li a:hover{
+    border-bottom: 2px solid #000000;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+   margin: 30px;
+   font-weight: bold;
+   font-size: 20px;
+}
+nav input{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    height: 35px;
+    width: 130px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+}
+/* form */
+
+.form2{
+    background-color: #fdfdfd;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 6%;
+    border-radius: 20px;
+}
+.form2 h2{
+    margin-left: 35%;
+    margin-right: 30%;
+    font-size: 30px;
+}
+  .form2 input,
+.btn2{
+    width: 250px;
+    height: 40px;
+    margin: 8px;
+    margin-left: 14%;
+    margin-right: 30%;
+}
+.form2 input{
+    border: 0;
+    border-bottom: 1px solid #000;
+}
+ .btn2 {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    border: none;
+}
+.form2 input:focus{
+    outline: none;
+  }
+
+.form2 a{
+    color: #1877F2;
+    text-decoration: none;
+}
+.form2 #pass{
+    margin-left: 32%;
+    margin-right: 30%;
+    padding-bottom: 30%; 
+}
+
+.form2 p{
+    padding-left: 18%;
+    padding-right: 30%;
+    padding-top: 25%;
+    padding-bottom: 5%;
+}
+/* forget password
+=========================================================== */
+.container,
+.form3{
+    display: flex;
+    flex-direction: row;
+    
+}
+.form3 input{
+    margin: 10px;
+}
+.form3 input{
+    width: 200px;
+    height: 40px;
+}
+.btns{
+    height: 40px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.account1{
+    background-color: #fdfdfd;
+    margin-left: 10%;
+    margin-right: 8%;
+    margin-top: 6%;
+    height: 300px;
+    border-radius: 10px;
+}
+.account{
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-top: 10%;
+}
+.account hr{
+    width: 666px;
+    color: black;
+    margin-top: 30px;
+}
+.account input{
+    width: 300px;
+    height: 40px;
+    margin-top: 40px;
+    margin-left: 20%;
+}
+ .btn1{
+    height: 40px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 32%;
+}
+.btnn{
+    height: 40px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 2%;
+}
+.account1 h2{
+    font-size: 25px;
+    margin-left: 30%;
+    padding-top: 15px
+}
