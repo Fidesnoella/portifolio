@@ -117,6 +117,8 @@ nav input{
     margin-left: 35%;
     margin-right: 30%;
     font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
   .form2 input,
 .btn2{
@@ -156,6 +158,58 @@ nav input{
     padding-top: 25%;
     padding-bottom: 5%;
 }
+@media screen and (max-width:1000px) {
+    .form2{
+        
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 6%;
+    }
+    .form2 h2{
+        margin-left: 25%;
+        margin-right: 20%;
+        font-size: 30px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+      .form2 input,
+    .btn2{
+        width: 200px;
+        height: 20px;
+        margin: 8px;
+        margin-left: 15%;
+        margin-right: 0%;
+    }
+    .form2 #pass{
+        margin-left: 20%;
+        margin-right: 20%;
+        padding-bottom: 30%; 
+    }
+    
+    .form2 p{
+        padding-left: 10%;
+        padding-right: 20%;
+        padding-top: 25%;
+        padding-bottom: 5%;
+    }
+    }
+    
+@media screen and (max-width:750px){
+    header{
+        display: initial;
+        background-color: white;
+    }
+
+nav ul li a {
+   margin: 20px;
+   font-size: 15px;
+}
+nav input{
+    height: 20px;
+    width: 60px;
+    font-size: 10px;
+}
+
 /* forget password
 =========================================================== */
 .container,
@@ -193,16 +247,13 @@ nav input{
     padding-right: 20%;
     margin-top: 10%;
 }
-.account hr{
-    width: 666px;
-    color: black;
-    margin-top: 30px;
-}
+
 .account input{
-    width: 300px;
-    height: 40px;
-    margin-top: 40px;
+    width: 350px;
+    height: 50px;
+    margin-top: 60px;
     margin-left: 20%;
+    border-radius: 5px;
 }
  .btn1{
     height: 40px;
@@ -212,7 +263,7 @@ nav input{
     border: none;
     border-radius: 5px;
     margin-top: 5px;
-    margin-left: 32%;
+    margin-left: 39%;
 }
 .btnn{
     height: 40px;
@@ -225,7 +276,30 @@ nav input{
     margin-left: 2%;
 }
 .account1 h2{
-    font-size: 25px;
-    margin-left: 30%;
-    padding-top: 15px
+    font-size: 30px;
+    margin-left: 20%;
+    padding-top: 30px
+}
+@media screen and (max-width:900px) {
+    .account1 h2{
+        font-size: 25px;
+        margin-left: 18%;
+    }
+    .account input{
+        width: 300px;
+        height: 50px;
+        margin-top: 60px;
+        margin-left: 15%;
+    }
+    .btn1{
+        height: 40px;
+        width: 80px;
+        margin-left: 30%;
+    }
+    .btnn{
+        height: 40px;
+        width: 80px;
+        margin-left: 2%;
+    }
+}
 }

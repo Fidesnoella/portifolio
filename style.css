@@ -108,6 +108,53 @@ nav input{
     background-color: #645c5c;
     transition: all ease 0.5s;
 }
+@media screen and (max-width:750px){
+    header{
+        display: initial;
+        background-color: white;
+    }
+
+nav ul li a {
+   margin: 20px;
+   font-size: 15px;
+}
+nav input{
+    height: 20px;
+    width: 60px;
+    font-size: 10px;
+}
+#pic{
+    width: 300px;
+    height: 400px;
+}
+main div{
+    padding-left: 15%;
+    padding-top: 5%;
+}
+.main #p1{
+    font-size: 10px;
+}
+.main #p2{
+    font-size: 15px;
+}
+.main #p3{
+    font-size: 30px;
+    font-weight: bold;
+}
+.main #p4{
+    font-size: 15px;
+}
+   
+    footer{
+        display: flex;
+        flex-wrap: initial;
+        background-color:#f5f6f6;;
+        font-size: 20px;
+    position:relative;
+    padding-left: 15%;
+    }
+   
+}
 
 /* contact page 
 ===========================================*/
@@ -153,30 +200,30 @@ nav input{
 }
 @media screen and (max-width:860px) {
     #h1{
-  margin-left: 30%;
+  margin-left: 20%;
   margin-top: 40px;
 }
 .contact p{
-    padding-left: 30%;
+    padding-left: 9%;
     font-size: 15px;
    
 }
 .form{
-    padding-left: 25%;
+    padding-left: 7%;
     margin-top: 10px;
 }
 .form input{
-    width: 200px;
+    width: 180px;
     height: 40px;
 }
 .message textarea{
     height: 160px;
-    width: 200px;
+    width: 160px;
  }
  .form button{
     width: 90px;
     height: 40px;
-    margin-left: 150px;
+    margin-left: 10px;
 }
 }
 /* About me page
@@ -226,7 +273,7 @@ nav input{
     height: 20px;
     margin-left: 20px;
 }
-@media only screen and (max-device-width:750px) {
+@media only screen and (max-device-width:800px) {
     header{
         display: initial;
         background-color: white;
@@ -237,31 +284,32 @@ nav ul li a {
    font-size: 15px;
 }
 nav input{
-    height: 30px;
-    width: 100px;
+    height: 20px;
+    width: 60px;
+    font-size: 10px;
+}
+#about{
+    font-size: 3opx;
+    padding-left: 20px;
+}
+
+.str{
+    padding-left: 5px;
+}
+.cont,
+ .img{
+     padding-left: 0px;
+ }
+ .btn4{
+    width: 90px;
+    margin: 20px;
+}
+.str h2{
+    font-size: 25px;
+}
+.str p{
     font-size: 15px;
 }
-    #about{
-        font-size: 30px;
-    }
-    .str{
-        margin-left: 15px;
-        margin-top: 10px;
-    }
-    .str h2{
-        font-size: 25px;
-    }
-    .str p{
-        font-size: 15px;
-    }
-    .btn4{
-        width: 90px;
-    }
-    #graph{
-        padding-left: 20px;
-        margin-top: 10px;
-        font-size: 15px;
-    }
 }
 
 /* blog page
@@ -278,18 +326,25 @@ nav input{
     padding-left: 20%;
     margin-top: 40px;
 }
-.row1 p{
+.row1 {
   font-size: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+#jpeg{
+    width: 400px;
 }
 .row2{
     font-size: 20px;
     margin-left: 40px;
+    background-color: white;
+    border-radius: 10px;
   }
 .subscribe{
     padding-left: 55%;
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .btn5{
     width: 120px;
@@ -298,4 +353,55 @@ nav input{
     color: white;
     border: none;
    margin-left: 10px;
+}
+@media screen and (max-width:1050px) {
+    .gridholder{
+        padding-left: 5%;
+    }
+    .subscribe{
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width:890px) {
+    
+.row1 {
+    font-size: 15px;
+  }
+  #jpeg{
+      width: 300px;
+  }
+  .row2{
+      font-size: 15px;
+      margin-left: 20px;
+    }
+    .subscribe{
+        padding-left: 30px;
+    }
+}
+@media screen and (max-width:750px) {
+    .gridholder{
+        padding-left: 0%;
+        margin-top: 40px;
+    }
+    .row1 {
+        font-size: 12px;
+        padding: 0%;
+      }
+      #jpeg{
+          width: 250px;
+      }
+      .row2{
+          font-size: 12px;
+          padding: 0%;
+          margin-left: 10px;
+        }
+        .subscribe{
+            padding-left: 40px;
+            margin-top: 5px;
+        }
+        .btn5{
+            width: 90px;
+            height: 30px;
+           margin-left: 10px;
+        }
 }
