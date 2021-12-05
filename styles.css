@@ -31,6 +31,9 @@
     background-color: #645c5c;
     transition: all ease 0.5s;
 }
+footer p{
+    margin-top: 15px;
+}
 @media screen and (max-width:750px){
     header{
         display: initial;
@@ -46,10 +49,10 @@ nav input{
     width: 60px;
     font-size: 10px;
 }
-.social-icons a{
-    width: 30px;
+.social-icons a img{
+    width: 20px;
     height: 20px;
- margin: 15px;
+ margin-top: 10px;
 }
 
     footer{
@@ -60,7 +63,6 @@ nav input{
     position:relative;
     padding-left: 15%;
     }
-   
 }
 /* Sign up page 
 ===========================================*/
@@ -76,19 +78,12 @@ body{
     height: 100%;
 }
 
-.text{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
 .text h1{
-    margin-right: 45%;
-    font-size: 30px;
-    padding-top: 10px;
+  font-size: 30px;
+  padding-left: 45%;
+  padding-top: 30px;
 }
-.text img{
-    padding-left: 20px;
-}
+
 .form1{
     display: flex;
     flex-direction: column;
@@ -101,6 +96,7 @@ body{
     width: 400px;
     height: 40px;
     margin: 8px;
+    padding-left: 20px;
 }
 .form1
 .btn{
@@ -180,7 +176,7 @@ nav input{
     margin-left: 35%;
     margin-right: 30%;
     font-size: 30px;
-    margin-top: 20px;
+    padding-top: 20px;
     margin-bottom: 50px;
 }
   .form2 input,
@@ -188,7 +184,7 @@ nav input{
     width: 250px;
     height: 40px;
     margin: 8px;
-    margin-left: 14%;
+    margin-left: 20%;
     margin-right: 30%;
 }
 .form2 input{
@@ -200,6 +196,7 @@ nav input{
     color: white;
     border-radius: 20px;
     border: none;
+    margin-bottom: 30px;
 }
 .form2 input:focus{
     outline: none;
@@ -210,50 +207,48 @@ nav input{
     text-decoration: none;
 }
 .form2 #pass{
-    margin-left: 32%;
-    margin-right: 30%;
-    padding-bottom: 30%; 
+    margin-left: 35%;
 }
 
 .form2 p{
-    padding-left: 18%;
+    padding-left: 20%;
     padding-right: 30%;
-    padding-top: 25%;
+    padding-top: 15%;
     padding-bottom: 5%;
+    font-size: 15px;
 }
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1200px) {
     .form2{
         
-        margin-left: 20%;
-        margin-right: 20%;
+        margin-left: 25%;
+        margin-right: 35%;
         margin-top: 6%;
     }
     .form2 h2{
         margin-left: 25%;
         margin-right: 20%;
         font-size: 30px;
-        margin-top: 20px;
+        padding-top: 20px;
         margin-bottom: 50px;
     }
       .form2 input,
     .btn2{
-        width: 200px;
+        width: 240px;
         height: 20px;
         margin: 8px;
         margin-left: 15%;
         margin-right: 0%;
     }
-    .form2 #pass{
-        margin-left: 20%;
-        margin-right: 20%;
-        padding-bottom: 30%; 
-    }
     
     .form2 p{
-        padding-left: 10%;
+        padding-left: 14%;
         padding-right: 20%;
         padding-top: 25%;
         padding-bottom: 5%;
+    }
+    .btn2 {
+        height: 30px;
+        margin-bottom: 30px;
     }
     }
     
@@ -272,6 +267,59 @@ nav input{
     width: 60px;
     font-size: 10px;
 }
+.form2{
+        
+    margin-left: 15%;
+    margin-right: 20%;
+    margin-top: 10%;
+}
+.form2 h2{
+    margin-left: 35%;
+    font-size: 20px;
+}
+.form2 input,
+.btn2{
+    width: 200px;
+    height: 30px;
+    margin: 8px;
+    margin-left: 15%;
+}
+.btn2 {
+    margin-bottom: 30px;
+}
+.form2 p{
+    padding-left: 10%;
+}
+.form2 #pass{
+    margin-left: 20%;
+}
+}
+@media only screen and (max-width:355px) {
+    
+.form2{
+        
+    margin-left: 10%;
+    margin-right: 15%;
+    margin-top: 13%;
+}
+.form2 h2{
+    margin-left: 30%;
+    font-size: 15px;
+}
+.form2 input,
+.btn2{
+    width: 150px;
+    height: 20px;
+    margin: 8px;
+    margin-left: 10%;
+}
+
+.form2 p{
+    padding-left: 6%;
+}
+.form2 #pass{
+    margin-left: 25%;
+}
 }
 /* forget password
 =========================================================== */
@@ -284,6 +332,7 @@ nav input{
 
 .form3 input{
     margin: 10px;
+    padding-left: 10px;
 }
 .form3 input{
     width: 200px;
@@ -321,6 +370,7 @@ nav input{
     margin-top: 60px;
     margin-left: 20%;
     border-radius: 5px;
+    padding-left: 20px;
 }
  .btn1{
     height: 40px;
@@ -346,4 +396,124 @@ nav input{
     font-size: 30px;
     margin-left: 20%;
     padding-top: 30px
+}
+
+@media screen and (max-width :900px) {
+    
+    .account1{
+        margin-left: 10%;
+        margin-right: 5%;
+        margin-top: 5%;
+        height: 300px;
+        width: 400px;
+    }
+    
+    .account{
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-top: 10%;
+    }
+    
+    .account h2{
+        font-size: 25px;
+    }
+.account input{
+    width: 300px;
+    height: 40px;
+    margin-top: 60px;
+    margin-left: 10%;
+    padding-left: 15px;
+}
+ .btn1{
+    height: 30px;
+    width: 80px;
+    margin-left: 40%;
+}
+.btnn{
+    height: 30px;
+    width: 80px;
+    margin-left: 4%;
+}
+    }
+@media screen  and (max-width: 700px) {
+    .container{
+      justify-content: space-around;
+    }
+    
+    .form3 input{
+        margin: 10px;
+        padding-left: 0px;
+    }
+    .form3 input{
+        width: 150px;
+        height: 30px;
+    }
+    .btns{
+        height: 30px;
+        width: 80px;
+    }
+    .container img{
+        width: 60px;
+        height: 45px;
+    }
+    .account1{
+        margin-top: 25%;
+        margin-left: 2%;
+    }
+}
+@media only screen and (max-width:550px) {
+    .container{
+        background-color: #f5f6f6;
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+
+    }
+}
+@media screen and (max-width:470px) {
+    .form3 input{
+        width: 100px;
+        height: 30px;
+    }
+    .btns{
+        height: 30px;
+        width: 50px;
+    }
+    .container img{
+        width: 50px;
+        height: 40px;
+    }
+    .account1{
+        margin-left: 5%;
+        margin-right: 2%;
+        margin-top: 2%;
+        height: 200px;
+        width: 300px;
+    }
+    
+    .account{
+        padding-left: 8%;
+        padding-right: 10%;
+        padding-top: 20%;
+    }
+    
+    .account h2{
+        font-size: 20px;
+    }
+.account input{
+    width: 200px;
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 10%;
+    padding-left: 15px;
+}
+ .btn1{
+    margin-left: 20%;
+}
+.btnn{
+    margin-left: 2%;
+}
+footer p{
+    font-size: 15px;
+}
 }

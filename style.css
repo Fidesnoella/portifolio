@@ -113,6 +113,9 @@ nav input{
     background-color: #645c5c;
     transition: all ease 0.5s;
 }
+footer p{
+    margin-top: 15px;
+}
 @media screen and (max-width:750px){
     header{
         display: initial;
@@ -149,10 +152,10 @@ main div{
 .main #p4{
     font-size: 15px;
 }
-.social-icons a{
-    width: 30px;
+.social-icons a img{
+    width: 20px;
     height: 20px;
- margin: 15px;
+ margin-top: 10px;
 }
 
     footer{
@@ -192,12 +195,14 @@ main div{
     border: 1px solid black;
     width: 280px;
     height: 40px;
+    padding-left:30px;
 }
 .message textarea{
    margin-top: 10px;
    height: 160px;
    width: 280px;
    border: 1px solid black;
+   padding-left:30px;
 }
 .form button{
     width: 120px;
@@ -212,6 +217,7 @@ main div{
     #h1{
   margin-left: 20%;
   margin-top: 40px;
+  font-size: 30px;
 }
 .contact p{
     padding-left: 9%;
@@ -233,7 +239,7 @@ main div{
  .form button{
     width: 90px;
     height: 40px;
-    margin-left: 10px;
+    margin-left: 120px;
 }
 }
 /* About me page
@@ -242,6 +248,7 @@ main div{
     font-size: 30px;
     padding-left: 40px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 .cont{
     display: flex;
@@ -249,7 +256,7 @@ main div{
 }
 .cont img{
     padding-left: 40px;
-    margin-top: 20px;
+    margin-top: 10px;
     padding-bottom: 10px;
 }
 
@@ -258,9 +265,8 @@ main div{
     margin-top: 10px;
 }
 .str h2{
-    font-size: 30px;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    font-size: 25px;
+    margin-bottom: 10px;
 }
 .str p{
     font-size: 20px;
@@ -277,10 +283,10 @@ main div{
 #graph{
     padding-left: 40px;
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 15px;
 }
 .img{
-    height: 20px;
+    height: 15px;
     margin-left: 20px;
 }
 @media only screen and (max-device-width:800px) {
@@ -305,13 +311,10 @@ nav input{
 
 .str{
     padding-left: 5px;
+    margin-top: 5px;
 }
-.cont,
- .img{
-     padding-left: 0px;
- }
  .btn4{
-    width: 90px;
+    width: 70px;
     margin: 20px;
 }
 .str h2{
