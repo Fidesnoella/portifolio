@@ -25,13 +25,33 @@
     <section class="text">
     <h1> SIGN UP</h1>
     </section>
-    <form class="form1">
-        <input type="text" placeholder="Enter Your Full Name">
-        <input type="email" placeholder="Enter Your Email">
-        <input type="text" placeholder="Enter Your User Name">
-        <input type="password" placeholder="Create Password">
-        <input type="password" placeholder="Confirm password">
-        <button class="btn">SIGN UP </button>
+    <form class="form1" id="form1" name="form1" method="post">
+        <div class="input-type">
+            <input type="text" value="" placeholder="Enter Your Full Name" name="names" id="name" onkeydown="validate()">
+            <span id="text1"></span>
+        </div>
+        <div class="input-type">
+            <input type="text" placeholder="Enter Your Email" id="email" name="email" onkeydown="validate()" >
+        <span id="text2"></span>
+        </div>
+        
+        <div class="input-type">
+            <input type="text" placeholder="Enter Your User Name" id="username" name="username" onkeydown="validate()">
+          <span id="text3"></span>
+        </div>
+        
+        <div class="input-type">
+            <input type="password" placeholder="Create Password" id="password" onkeydown="validate()">
+            <span id="text4"></span>
+        </div>
+        
+        <div class="input-type">
+            <input type="password" placeholder="Confirm password" id="password2" onkeydown="validate()">
+            <span id="text5"></span>
+        </div>
+        
+        
+        <button class="btn" type="text" name="submit" id="formSubmit" onclick="validate()">SIGN UP </button>
     </form>
     <footer>
         <p>Let's connect</p>
@@ -42,5 +62,6 @@
             <a href="https://www.facebook.com/fidesnoella/"><img src="img/facebook-app-symbol.png" width="30" height="30"></a>
     </div>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>

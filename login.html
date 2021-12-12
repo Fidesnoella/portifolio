@@ -23,9 +23,17 @@
        <main>
            <div class="form2">
             <h2>Welcome</h2>
-               <form>
-                <input type="text" type="email" placeholder="Email or Username"><br>
-                <input type="password" placeholder="Password"><br>
+               <form name="form2" id="form2" onsubmit="return checkInput()">
+                <div>
+                    <input type="text" type="email" placeholder="Email or Username" name="useremail" id="useremail" onkeydown="checkInput()"><br>
+                    <span id="text1"></span>
+                </div>
+                
+                <div>
+                    <input type="password" placeholder="Password" name="password" id="password" onkeydown="checkInput()"><br>
+                    <span id="text2"></span>
+                </div>
+                
                 <button class="btn2">Sign In</button><br>
                 <a href="forgetpassword.html" id="pass">Forget password?</a><br>
                 <p>Don't have an account? <a href="signup.html">Sign up</a></p>
@@ -41,5 +49,6 @@
             <a href="https://www.facebook.com/fidesnoella/"><img src="img/facebook-app-symbol.png" width="30" height="30"></a>
     </div>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>
