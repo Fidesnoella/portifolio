@@ -167,6 +167,7 @@ main div{
     position:relative;
     padding-left: 15%;
     }
+
    
 }
 
@@ -191,12 +192,19 @@ main div{
     padding-left: 30%;
     margin-top: 10px;
 }
-.form #text1,
-#text2,
-#text3,
-#text4{
-    margin-left: 30px;
-    font-size: 15px;
+.form-group.success input {
+    border-color: #09c372;
+}
+
+.form-group.error input {
+    border-color: #ff3860;
+}
+.error {
+    color: #ff3860;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 5px;
+    margin-left: 35px;
 }
 .form input{
     margin: 5px;
@@ -208,8 +216,11 @@ main div{
 .form input:focus{
     outline: none;
 }
+.active{
+   border-bottom: 2px solid black;
+}
 .message textarea{
-   margin-top: 6px;
+   margin-top: 5px;
    height: 175px;
    width: 280px;
    padding-left: 20px;
@@ -222,6 +233,13 @@ main div{
 .message #message{
     display: flex;
     flex-direction: column;
+}
+.message.success textarea {
+    border-color: #09c372;
+}
+
+.message.error textarea{
+    border-color: #ff3860;
 }
 .form button{
     width: 120px;
@@ -266,12 +284,12 @@ padding-left: 20%;
     height: 40px;
     margin: 1px;
 }
-.form #text1,
-#text2,
-#text3,
-#text4{
-    margin-left: 10px;
+.error {
+    color: #ff3860;
     font-size: 13px;
+    margin-top: -3px;
+    margin-bottom: 5px;
+    margin-left: 12px;
 }
 .message textarea{
     height: 160px;
@@ -415,10 +433,10 @@ nav input{
     padding-left: 55%;
     display: flex;
     flex-direction: row;
-    margin-top: 30px;
+   
 }
 .subscribe h2{
-    margin-top: 10px;
+    margin-top: 150px;
 }
 .btn5{
     width: 120px;
@@ -428,7 +446,77 @@ nav input{
     border: none;
    margin-left: 10px;
    margin-bottom: 10px;
+   cursor: pointer;
+   margin-top:140px;
 }
+
+.modal-wrapper{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #24232354 ; 
+    display: none;
+}
+.modal{
+    position: relative;
+    background: #fff;
+    text-align: center;
+    width: 25rem;
+    margin: 5rem auto;
+    -webkit-box-shadow : 0px 4px 22px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow : 0px 4px 22px  -6px rgba(0,0,0,0.75);
+    box-shadow : 0px 4px 22px  -6px rgba(0,0,0,0.75);
+    animation-name: animatetop;
+    animation-duration: .4s;
+}
+
+
+.modal-show{
+    display: block;
+} 
+@keyframes animatetop{
+    from {
+        top : -300px; opacity: 0;
+    }
+    to{
+        top: 0; opacity: 1;
+    }
+}
+.forms input{
+    width: 300px;
+}
+.modal-header{
+    margin-bottom: 1rem;
+    background: #f8fafb;
+    padding: 2rem;
+}
+.modal-body{
+padding: 2rem;
+}  
+.modal-body input{
+    display: flex;
+    flex-direction: column;
+    height: 2.2rem;
+    margin-bottom: 1rem;
+    text-indent: .5rem;
+    outline: none;
+}
+
+.btn-modal,
+.btn-add,
+.btn-edit,
+.btn-delete{
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
 @media screen and (max-width:1050px) {
     .gridholder{
         padding-left: 5%;
@@ -479,11 +567,23 @@ nav input{
         }
         .subscribe h2{
             font-size: 15px;
-            margin-top: 10px;
+            margin-top: 150px;
         }
         .btn5{
             width: 70px;
             height: 25px;
            margin-left: 10px;
+           margin-top: 150px;
         }
 }
+
+.footerblog{
+    display: flex;
+    flex-wrap: initial;
+    background-color:#f5f6f6;;
+    background-color: white;
+    font-size: 20px;
+position:fixed;
+padding-left: 15%;
+}
+

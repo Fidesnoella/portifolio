@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/CSS/styles.css">
     <title>Log In</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
            <ul>
                <li><a href="index.html">Home</a></li>
                <li><a href="about.html">About</a></li>
-               <li><a href="blog.html">Blog</a></li>
+               <li><a href="login.html">Blog</a></li>
                <li><a href="contact.html">Contact</a></li>
                <a href="login.html"><input type="text" placeholder="&nbsp; Let's talk"></a>
            </ul>
@@ -23,18 +23,18 @@
        <main>
            <div class="form2">
             <h2>Welcome</h2>
-               <form name="form2" id="form2" onsubmit="return checkInput()">
-                <div>
-                    <input type="text" type="email" placeholder="Email or Username" name="useremail" id="useremail" onkeydown="checkInput()"><br>
-                    <span id="text1"></span>
+               <form name="form2" id="login-form">
+                <div class="input">
+                    <input type="email" placeholder="Enter Your Email" name="email" id="email"><br>
+                    <span class="error"></span>
                 </div>
                 
-                <div>
-                    <input type="password" placeholder="Password" name="password" id="password" onkeydown="checkInput()"><br>
-                    <span id="text2"></span>
+                <div class="input">
+                    <input type="password" placeholder="Password" name="password" id="password"><br>
+                    <span class="error"></span>
                 </div>
                 
-                <button class="btn2">Sign In</button><br>
+                <button class="btn2" type="submit">Sign In</button><br>
                 <a href="forgetpassword.html" id="pass">Forget password?</a><br>
                 <p>Don't have an account? <a href="signup.html">Sign up</a></p>
                </form>
@@ -49,6 +49,12 @@
             <a href="https://www.facebook.com/fidesnoella/"><img src="img/facebook-app-symbol.png" width="30" height="30"></a>
     </div>
     </footer>
-    <script src="index.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+    <script src="/JS/firebase.js"></script>
+    <script src="/JS/index.js"></script>
+    <!-- <script src="/JS/login.js"></script> -->
 </body>
 </html>

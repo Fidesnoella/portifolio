@@ -88,33 +88,36 @@ body{
     display: flex;
     flex-direction: column;
     padding-left: 35%;
-    margin-top: 60px;
+    margin-top: 50px;
     
 }
 .form1 input,
 .btn{
     width: 400px;
     height: 40px;
-    margin: 8px;
+    margin: 5px;
     padding-left: 20px;
 }
 .form1 input:focus{
     outline: none;
 }
- .input-type #text1,
- #text3,
- #text4,
-#text5{
-    font-weight: 300;
+.input-type span{
     display: flex;
     flex-direction: column;
-    margin-left: 30px;
 }
-.input-type #text2{
-    font-weight: 300;
-    display: flex;
-    flex-direction: column;
-    margin-left: 25px;
+.input-type.success input {
+    border-color: #09c372;
+}
+
+.input-type.error input {
+    border-color: #ff3860;
+}
+
+.input-type .error {
+    color: #ff3860;
+    font-size: 15px;
+    height: 13px;
+    margin-left: 40px;
 }
 .form1
 .btn{
@@ -129,8 +132,7 @@ body{
     .form1 input,
 .btn{
     width: 250px;
-    height: 40px;
-    margin: 4px;
+    height: 30px;
     margin-right: 20%;
 }
 }
@@ -186,7 +188,7 @@ nav input{
 .form2{
     background-color: #fdfdfd;
     margin-left: 35%;
-    margin-right: 35%;
+    margin-right: 25%;
     margin-top: 6%;
     border-radius: 20px;
 }
@@ -224,6 +226,20 @@ nav input{
 .form2 input:focus{
     outline: none;
   }
+  .input.success input {
+    border-color: #09c372;
+}
+
+.input.error input {
+    border-color: #ff3860;
+}
+
+.input .error {
+    color: #ff3860;
+    font-size: 15px;
+    height: 13px;
+    padding-left: 90px;
+}
 
 .form2 a{
     color: #1877F2;
@@ -240,19 +256,27 @@ nav input{
     padding-bottom: 5%;
     font-size: 15px;
 }
+@media screen and (max-width:1500px) {
+    .form2{
+        
+        margin-left: 40%;
+        margin-right: 30%;
+        margin-top: 2%;
+    }
+}
 @media screen and (max-width:1200px) {
     .form2{
         
         margin-left: 25%;
         margin-right: 35%;
-        margin-top: 6%;
+        margin-top: 3%;
     }
     .form2 h2{
         margin-left: 25%;
         margin-right: 20%;
         font-size: 30px;
         padding-top: 20px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
       .form2 input,
     .btn2{
@@ -266,7 +290,7 @@ nav input{
     .form2 p{
         padding-left: 14%;
         padding-right: 20%;
-        padding-top: 25%;
+        padding-top: 15%;
         padding-bottom: 5%;
     }
     .form2 #text1,
@@ -405,6 +429,8 @@ nav input{
     border-radius: 5px;
     padding-left: 20px;
 }
+
+
  .btn1{
     height: 40px;
     width: 100px;
@@ -549,4 +575,59 @@ nav input{
 footer p{
     font-size: 15px;
 }
+}
+
+/* =Subscribe============================================
+ */
+ .sub{
+     display: flex;
+     flex-direction: row;
+     padding-top: 20%;
+     padding-left: 100px;
+ }
+ .sub h1{
+     font-size: 30px;
+     margin-top: 5px;
+ }
+ .newslatter form {
+    width: 400px;
+    max-width: 100%;
+    position: relative;
+    margin-left: 60px;
+}
+.newslatter form input:first-child{
+    display: inline-block;
+    width: 100%;
+    padding: 14px 130px 14px 15px;
+    border: 2px solid rgb(22, 22, 22);
+    outline: none;
+    border-radius: 30px;
+}
+.newslatter form input:last-child{
+    position: absolute;
+    display: inline-block;
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: rgb(9, 10, 10);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #000, 0px 0px 15px #868686;
+    top: 6px;
+    right: 6px;
+}
+.subs.success input {
+    border-color: #09c372;
+}
+
+.subs.error input {
+    border-color: #ff3860;
+}
+
+.subs .error {
+    color: #ff3860;
+    font-size: 15px;
+    height: 13px;
+    padding-left: 90px;
 }

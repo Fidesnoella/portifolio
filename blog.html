@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+   
+    
     <title>blog</title>
 </head>
 <body>
@@ -14,38 +16,98 @@
            <ul>
                <li><a href="index.html">Home</a></li>
                <li><a href="about.html">About</a></li>
-               <li><a href="login.html">Blog</a></li>
+               <li><a href="login.html" class="active">Blog</a></li>
                <li><a href="contact.html">Contact</a></li>
                <a href="login.html"><input type="text" placeholder="&nbsp; Let's talk"></a>
                
            </ul>
-           
        </nav>
-       </header> 
-       <main>
-           <h2 id="art">Articles</h2>
-           <div class="gridholder">
-            <div class="row1">   
-                <img src="img/images.jpeg" id="jpeg"><p>To build a good website you have to choose <br>best tools to use that can be easly to use and<br> understand.Where you can design good <br>  prototype of your website, where you can write <br> and the place you can host your website <br>and reach where you want.
-                </p><p><strong>Leave a comment</strong><img src="img/comment_120216.png" id="comment"></p></div>
-            <div class="row2">   
-                <img src="img/download.jpeg" id="jpeg"><p>Web design is what creates the overall <br>look and feel when you’re using a website.<br> It’s the process of planning and building <br>the elements of your website, from structure<br> and layout to images, colors, fonts and graphics.
+    </header>
 
-                </p><p><strong>Leave a comment</strong><img src="img/comment_120216.png" id="comment" ></p></div>
-           </div>
-           <div class="subscribe">
-               <h2>Follow for more</h2>
-               <button class="btn5">subscribe</button>
-           </div>
-       </main>
-       <footer>
-        <p>Let's connect</p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/iragena-fides-noella-634bb3226/"><img src="img/linkedin-icon.png" width="30" height="30"></a>
-            <a href="https://www.twitter.com/fidesnoella/"><img src="img/twitter.png" width="30" height="30"></a>
-            <a href="https://www.instagram.com/fidesnoella/"><img src="img/instagram.png" width="30" height="30"> </a>
-            <a href="https://www.facebook.com/fidesnoella/"><img src="img/facebook-app-symbol.png" width="30" height="30"></a>
-    </div>
-    </footer>
+        <div class="table-wrapper" id="contactForm">
+          <table class="table-users">
+            <tr>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Action</th>
+            </tr>
+          </table>
+          <button class="btn btn-add">Add User</button>
+        </div>
+        <!-- Add Modal -->
+        <div class="add-modal modal-wrapper">
+          <div class="modal">
+            <div class="modal-header"><h3>Add New Article</h3></div>
+            <div class="modal-body">
+              <form class="forms" autocomplete="off">
+                <input type="text" name="title" placeholder="Title">
+                <input type="text" name="description" placeholder="Description">
+                <button class="btn btn-modal">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Edit Modal -->
+        <div class="edit-modal modal-wrapper">
+          <div class="modal">
+            <div class="modal-header"><h3>Edit User</h3></div>
+            <div class="modal-body">
+              <form class="forms" autocomplete="off">
+                <input type="text" name="title" placeholder="Title">
+                <input type="text" name="description" placeholder="Description">
+                <button class="btn btn-modal">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+     
+
+
+<div class="subscribe">
+    <h2>Follow for more</h2>
+   <a href="/Sub_and_Hire/subscribe.html"> <button class="btn5">subscribe</button></a>
+</div> 
+
+ <footer class="footerblog">
+    <p>Let's connect</p>
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/iragena-fides-noella-634bb3226/"><img src="img/linkedin-icon.png" width="30" height="30"></a>
+        <a href="https://www.twitter.com/fidesnoella/"><img src="img/twitter.png" width="30" height="30"></a>
+        <a href="https://www.instagram.com/fidesnoella/"><img src="img/instagram.png" width="30" height="30"> </a>
+        <a href="https://www.facebook.com/fidesnoella/"><img src="img/facebook-app-symbol.png" width="30" height="30"></a>
+</div>
+</footer> 
+         
+        <!-- // Import the functions you need from the SDKs you need -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+        <!-- // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+        <script >
+        // Your web app's Firebase configuration
+       var firebaseConfig = {
+          apiKey: "AIzaSyDOlvMm2VN6viYiQcGPX7wEYkh3Wsx4YyQ",
+          authDomain: "portifolio-f94f6.firebaseapp.com",
+          databaseURL: "https://portifolio-f94f6-default-rtdb.firebaseio.com",
+          projectId: "portifolio-f94f6",
+          storageBucket: "portifolio-f94f6.appspot.com",
+          messagingSenderId: "1005477449453",
+          appId: "1:1005477449453:web:9254463eb8b736dbb446e4"
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+      </script>
+      <script src="/blog/blogfb.js"></script>
+      <script src="/JS/firebase.js"></script>
+      <script src="/JS/main.js"></script>
 </body>
 </html>
