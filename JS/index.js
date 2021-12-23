@@ -14,7 +14,7 @@ const loginForm = document.querySelector('#login-form');
     console.log(auth);
     loginForm.reset();
     setTimeout(() => {
-        window.location.pathname = "/blog.html";
+        window.location.pathname = "./blog.html";
       }, 1000)
 .catch(error => {
  alert(error.message);

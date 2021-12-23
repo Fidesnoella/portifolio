@@ -14,7 +14,7 @@ password = document.getElementById('password');
  console.log(auth);
 signupForm.reset();
  setTimeout(() => {
-          window.location.pathname = "/login.html";
+          window.location.pathname = "./login.html";
         }, 1000)
  .catch(error => {
    console.log(error.message);
