@@ -1,71 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous" ></script>   
     <link rel="stylesheet" href="./CSS/styles.css">
-   <title>Sign up</title>
+    <title>Sign up</title>
 </head>
-<body >
+
+<body>
     <header>
         <h1 class="logo"><img src="img/LOGO.png" width="80" height="53"></h1>
-       <nav>
-           <ul>
-               <li><a href="index.html">Home</a></li>
-               <li><a href="about.html">About</a></li>
-               <li><a href="login.html">Blog</a></li>
-               <li><a href="contact.html">Contact</a></li>
-               <a href="login.html"><input type="text" placeholder="&nbsp; Let's talk"></a>
-               
-           </ul>
-           
-       </nav>
-       </header> 
-    <section class="text">
-    <h1> SIGN UP</h1>
-    </section>
-    <form class="form1" id="signup-form" name="form1">
-        <div class="input-type">
-            <input type="text" value="" placeholder="Enter Your Full Name" name="name" id="names">
-            <span class="error"></span>
-        </div>
-        <div class="input-type">
-            <input type="text" placeholder="Enter Your Email" id="email" name="email" >
-            <span class="error"></span>
-        </div>
-        
-        
-        <div class="input-type">
-            <input type="password" placeholder="Create Password" id="password">
-            <span class="error"></span>
-        </div>
-        
-        <div class="input-type">
-            <input type="password" placeholder="Confirm password" id="password2">
-            <span class="error"></span>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="signup.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <a href="signup.html"><input type="text" placeholder="&nbsp; Let's talk"></a>
 
-        <button class="btn" type="submit" sendMessage()>SIGN UP </button>
-        
-    </form> 
-    <footer>  
+            </ul>
+
+        </nav>
+    </header>
+    <section id="section">
+        <div class="container">
+            <form class="form" id="login">
+                <h1 class="form__title">Login</h1>
+                <div class="form__input-group indicators ">
+                    <input type="text" class="form__input" autofocus placeholder="Email" id="email">
+                    <span class="indicator" id="emailValid"></span>
+                    <span id="emailInnerTexts"></span>
+                </div>
+                <div class="form__input-group indicators">
+                    <input type="password" class="form__input" autofocus placeholder="Password" id="password">
+                    <span class="indicator " id="password1Valid"></span>
+                    <span id="pswdInnerText"></span>
+                </div>
+                <button class="form__button" type="submit" id="submits" >Sign In</button>
+                <p class="form__text">
+                    <a href="forgetpassword.html" class="form__link">Forget password?</a>
+                </p>
+                <p class="form__text">
+                    Don`t have an account? <a href="#" class="form__link" id="linkCreateAccount">Create account</a>
+                </p>
+            </form>
+            <form class="form  form--hidden" id="createAccount">
+                <h1 class="form__title">Create Account</h1>
+
+                <div class="form__input-group indicators">
+                    <input type="text" class="form__input" id="names" autofocus placeholder="Full Name">
+                    <!-- <small>Error message</small> -->
+                    <span class="indicator nameInd" id="nameValid"></span>
+                    <span id="nameInnerText"></span>
+                </div>
+                <div class="form__input-group indicators">
+                    <input type="text" class="form__input" id="emails" autofocus placeholder="Email address">
+                    <!-- <small>Error message</small> -->
+                    <span class="indicator" id="emailValid"></span>
+                    <span id="emailInnerText"></span>
+                </div>
+                <div class="form__input-group indicators">
+                    <input type="password" class="form__input" id="password1" autofocus placeholder="Password">
+                    <!-- <small>Error message</small> -->
+                    <span class="indicator " id="password1Valid"></span>
+                    <span id="pswd1InnerText"></span>
+                </div>
+                <div class="form__input-group indicators">
+                    <input type="password" class="form__input " id="password2" autofocus placeholder="Confirm Password">
+                    <!-- <small>Error message</small> -->
+                    <span class="indicator " id="password2Valid"></span>
+                    <span id="pswd2InnerText"></span>
+                </div>
+                <button class="form__button" type="submit" id="submit" sendMessage()>Sign Up</button>
+                <p class="form__text">
+                    Already gave an account?<a href="#" class="form__link" id="linkLogin"> Sign In</a>
+                </p>
+            </form>
+        </div>
+    </section>
+    <footer>
         <p>Let's connect</p>
-        <div class="social-icons">   
-            <a href="https://www.linkedin.com/in/iragena-fides-noella-634bb3226/"><img src="img/linkedin-icon.png" width="30" height="30"></a>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/iragena-fides-noella-634bb3226/"><img src="img/linkedin-icon.png"
+                    width="30" height="30"></a>
             <a href="https://www.twitter.com/fidesnoella/"><img src="img/twitter.png" width="30" height="30"></a>
             <a href="https://www.instagram.com/fidesnoella/"><img src="img/instagram.png" width="30" height="30"> </a>
-            <a href="https://www.facebook.com/fidesnoella/"><img src="img/facebook-app-symbol.png" width="30" height="30"></a>
-    </div>
+            <a href="https://www.facebook.com/fidesnoella/"><img src="img/facebook-app-symbol.png" width="30"
+                    height="30"></a>
+        </div>
     </footer>
-   
+
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
-    <script src="./JS/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+
+    <script defer src="./JS/firebase.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./JS/main.js"></script>
-    <!-- <script src="/JS/signup.js"></script> -->
+    <script defer src="./JS/signup.js"></script>
+    <script src="./JS/index.js"></script>
 </body>
+
 </html>

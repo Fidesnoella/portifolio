@@ -13,7 +13,7 @@
     font-size: 25px;
     padding-left: 20%;
     bottom: 0;
-    position: fixed;
+    position: fixed; 
 } 
 .social-icons {
     display: flex;
@@ -66,7 +66,7 @@ nav input{
 }
 /* Sign up page 
 ===========================================*/
-
+/* 
 *{
     padding: 0;
     margin: 0;
@@ -136,8 +136,177 @@ body{
     margin-right: 20%;
 }
 }
+ */
+  body{
+     background-color:#f5f6f6;
+    --color-primary : black;
+    --color-secondary: #252c6a;
+    --color-error: #cc3333;
+    --color--success:#4bb544;
+    --border-radius: 5px;
+} 
+#section{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+   
+}
+ .container{
+     width: 400px;
+    max-width: 400px;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0.1);
+    border-radius: var(--border-radius);
+    background: #ffffff;
+    justify-content: center;
+}
+.form--hidden{
+    display: none;
+}
+
+.form > *:first-child{
+    margin-top: 0;
+}
+.form > *:last-child{
+    margin-bottom: 0;
+}
+.form__title{
+    text-align: center;
+    margin-bottom: 1rem;
+    top: 0;
+    font-size: 2rem;
+}
+
+.form__input-group{
+    margin-bottom: 1rem;
+}
 
 
+.form__input{
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border: 1px solid black;
+    outline: none;
+  
+}
+
+/* .form__input--error{
+    color: var(--color-error);
+    border-color: var(--color-error) ;
+}
+
+.form__input-error-message {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-error);
+
+} */
+.indicators{
+    position: relative;
+}
+.indicator {
+    position: absolute;
+    top: 40%;
+    right: 2%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(214, 210, 210);
+}
+form .indicator {
+    position: absolute;
+    top: 20%;
+    right: 2%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #faf5f5;
+   
+}
+
+form .indicator.valid{
+    background-image: url(../img/valid.jpg);
+    background-size: cover;
+}
+form .indicator.invalid{
+    background-image: url(../img/invalid.png);
+    background-size: cover;
+}
+
+
+
+
+
+.form__button{
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    background-color: var(--color-primary);
+}
+.form__button:disabled {
+    cursor: not-allowed;
+    background-color: var(--color-primary);
+}
+
+.form__button:enabled {
+    background-color: var(--color-primary);
+    cursor: pointer;
+}
+
+
+.form__button:hover{
+   background-color: #f5f6f6;
+   color: black;
+}
+.form__button:active{
+    transform: scale(0.98);
+}
+
+.form__text{
+    text-align: center;
+}
+
+.form__link{
+    color: var(--color-secondary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form__link:hover{
+    text-decoration: underline;
+}
+.form__input-error-message{
+    visibility: hidden;
+}
+.form__input-group.success input{
+    border-color: var(--color--success);
+ 
+ }
+ .form__input-group.error input{
+     border-color: var(--color-error);
+  }
+  .form__input-group small{
+      visibility: hidden;
+      position: absolute;
+  }
+  .form__input-group.error small{
+      color: var(--color-error);
+      visibility: visible;
+  }
+
+
+ 
 /* Login 
 ============================================================================== */
 header{
@@ -182,8 +351,55 @@ nav input{
     font-size: 20px;
     cursor: pointer;
     border: none;
+} 
+
+
+
+
+
+@media screen and (max-width:750px){
+    header{
+        display: initial;
+        background-color: white;
+    }
+
+nav ul li a {
+   margin: 20px;
+   font-size: 15px;
 }
-/* form */
+nav input{
+    height: 20px;
+    width: 60px;
+    font-size: 10px;
+}
+#pic{
+    width: 300px;
+    height: 400px;
+}
+main div{
+    padding-left: 15%;
+    padding-top: 5%;
+}
+.main #p1{
+    font-size: 10px;
+}
+.main #p2{
+    font-size: 15px;
+}
+.main #p3{
+    font-size: 30px;
+    font-weight: bold;
+}
+.main #p4{
+    font-size: 15px;
+}
+.social-icons a img{
+    width: 20px;
+    height: 20px;
+ margin-top: 10px;
+}
+}
+/* form
 
 .form2{
     background-color: #fdfdfd;
@@ -377,207 +593,9 @@ nav input{
 .form2 #pass{
     margin-left: 25%;
 }
-}
-/* forget password
-=========================================================== */
- .container,
-.form3{
-    display: flex;
-    flex-direction: row;
-    
-}
+} */
 
-.form3 input{
-    margin: 10px;
-    padding-left: 10px;
-}
-.form3 input{
-    width: 200px;
-    height: 40px;
-}
-
-.btns{
-    height: 40px;
-    width: 100px;
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.account1{
-    background-color: #fdfdfd;
-    margin-left: 10%;
-    margin-right: 8%;
-    margin-top: 6%;
-    height: 250px;
-    border-radius: 10px;
-}
-
-.account{
-    padding-left: 20%;
-    padding-right: 20%;
-    margin-top: 10%;
-}
-
-.account input{
-    width: 350px;
-    height: 50px;
-    margin-top: 60px;
-    margin-left: 20%;
-    border-radius: 5px;
-    padding-left: 20px;
-}
-
-
- .btn1{
-    height: 40px;
-    width: 100px;
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-top: 7px;
-    margin-left: 39%;
-}
-.btnn{
-    height: 40px;
-    width: 100px;
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-top: 7px;
-    margin-left: 2%;
-}
-.account1 h2{
-    font-size: 30px;
-    margin-left: 20%;
-    padding-top: 30px
-}
-
-@media screen and (max-width :900px) {
-    
-    .account1{
-        margin-left: 10%;
-        margin-right: 5%;
-        margin-top: 5%;
-        height: 250px;
-        width: 400px;
-    }
-    
-    .account{
-        padding-left: 10%;
-        padding-right: 10%;
-        margin-top: 10%;
-    }
-    
-    .account h2{
-        font-size: 25px;
-    }
-.account input{
-    width: 300px;
-    height: 40px;
-    margin-top: 60px;
-    margin-left: 10%;
-    padding-left: 15px;
-}
- .btn1{
-    height: 30px;
-    width: 80px;
-    margin-left: 40%;
-}
-.btnn{
-    height: 30px;
-    width: 80px;
-    margin-left: 4%;
-}
-    }
-@media screen  and (max-width: 700px) {
-    .container{
-      justify-content: space-around;
-    }
-    
-    .form3 input{
-        margin: 10px;
-        padding-left: 0px;
-    }
-    .form3 input{
-        width: 150px;
-        height: 30px;
-    }
-    .btns{
-        height: 30px;
-        width: 80px;
-    }
-    .container img{
-        width: 60px;
-        height: 45px;
-    }
-    .account1{
-        margin-top: 25%;
-        margin-left: 2%;
-    }
-}
-@media only screen and (max-width:550px) {
-    .container{
-        background-color: #f5f6f6;
-        display: flex;
-        flex-direction: column;
-        padding-top: 30px;
-
-    }
-}
-@media screen and (max-width:470px) {
-    .form3 input{
-        width: 100px;
-        height: 30px;
-    }
-    .btns{
-        height: 30px;
-        width: 50px;
-    }
-    .container img{
-        width: 50px;
-        height: 40px;
-    }
-    .account1{
-        margin-left: 5%;
-        margin-right: 2%;
-        margin-top: 2%;
-        height: 200px;
-        width: 300px;
-    }
-    
-    .account{
-        padding-left: 8%;
-        padding-right: 10%;
-        padding-top: 20%;
-    }
-    
-    .account h2{
-        font-size: 20px;
-    }
-.account input{
-    width: 200px;
-    height: 40px;
-    margin-top: 30px;
-    margin-left: 10%;
-    padding-left: 15px;
-}
- .btn1{
-    margin-left: 20%;
-}
-.btnn{
-    margin-left: 2%;
-}
-footer p{
-    font-size: 15px;
-}
-}
-
-/* =Subscribe============================================
+/* =Subscribe==========================================s==
  */
  .sub{
      display: flex;

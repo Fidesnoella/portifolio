@@ -1,71 +1,72 @@
-let formMessage = firebase.database().ref('user');
-const signupForm = document.querySelector('#signup-form');
-signupForm.addEventListener('submit', (e) => {
- e.preventDefault();
 
 
- names = document.getElementById('names');
- email = document.getElementById('email');
-password = document.getElementById('password');
-  password2 = document.getElementById('password2');
+document.addEventListener("DOMContentLoaded", () =>{
+  const loginForm = document.querySelector("#login");
+  const CreatAccountForm = document.querySelector("#createAccount");
 
+  document.querySelector("#linkCreateAccount").addEventListener("click",(e)=>{
+      e.preventDefault();
+      loginForm.classList.add("form--hidden");
+      CreatAccountForm.classList.remove("form--hidden");
+  });
 
- app_firebase.auth().createUserWithEmailAndPassword(email.value,password.value)
- console.log(auth);
-signupForm.reset();
- setTimeout(() => {
-          window.location.pathname = "./login.html";
-        }, 1000)
- .catch(error => {
-   console.log(error.message);
- })
-
-
- sendMessage(names, email);
-
- alert('Signed up')
-   //Form Reset After Submission(7)
-   document.getElementById('signup-form').reset();
+  document.querySelector("#linkLogin").addEventListener("click",(e)=>{
+      e.preventDefault();
+      loginForm.classList.remove("form--hidden");
+      CreatAccountForm.classList.add("form--hidden");
+  });
+ 
 });
 
 
-// let formMessage = firebase.database().ref('user');
+document.getElementById("createAccount").addEventListener("submit", (e) => {
+  e.preventDefault();
+  let names, password1, password2, emails;
+  names = document.getElementById("names").value;
+  password1 = document.getElementById("password1").value;
+  password2 = document.getElementById("password2").value;
+  emails = document.getElementById("emails").value;
+  // signupRegister(names, password1, passwordtwo, emails);
 
-// //listen for submit event//(1)
-// document
-//   .getElementById('form')
-//   .addEventListener('submit', formSubmit);
+  app_firebase
+    .auth()
+    .createUserWithEmailAndPassword(emails, password1)
+    .then((userCredential) => {
+      var user = userCredential.user;
+      console.log("User created");
+      swal("Signed Up!", "Account created!", "success");
+      user.updateProfile({
+        displayName: names,
+      });
+      setTimeout(() => {
+        window.location.pathname = "./signup.html";
+      }, 4000);
+    })
+    .catch((error) => {
+      swal( "Account already exist!", "error");
+    });
+});
 
+// var con = firebase.database().ref('userInfo');
 
-// // document.getElementById('registrationform').addEventListener('submit', formSubmit);
+// form.addEventListener('submit', e => {
 
-// //Submit form
-// function formSubmit(e) {
-//   e.preventDefault();
-//   // Get Values from the DOM
-//   let names = document.querySelector('#names').value;
-//   let email = document.querySelector('#email').value;
-//   let phone = document.querySelector('#phone').value;
-//   let message = document.querySelector('#message').value;
+//   var userInfo = con.push();
+//   userInfo.set({
+//    name: getId("names"),
+//    email: getId("emails"),
+//   });
 
+//   document.getElementById("createAccount").reset();
 
-//   //send message values
-//   sendMessage(names, email, phone, message);
-
-// alert('Thank you for your feedback')
-//   //Form Reset After Submission(7)
-//   document.getElementById('form').reset();
+ 
+ 
+// }); 
+// function getId(id){
+//   return document.getElementById(id).value;
 // }
 
-//Send Message to Firebase(4)
 
-function sendMessage(names, email) {
-  let newFormMessage = formMessage.push();
-  newFormMessage.set({
-    names: names,
-    email: email
-  });
-}
 
 
 

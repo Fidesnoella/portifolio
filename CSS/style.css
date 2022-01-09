@@ -175,7 +175,7 @@ main div{
 ===========================================*/
 #h1{
   margin-left: 40%;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 .contact p{
     padding-left: 40%;
@@ -183,7 +183,7 @@ main div{
    
 }
 .contact .p1{
-    margin-top: 70px;
+    margin-top: 55px;
 }
 
 .form{
@@ -221,7 +221,7 @@ main div{
 }
 .message textarea{
    margin-top: 5px;
-   height: 175px;
+   height: 140px;
    width: 280px;
    padding-left: 20px;
    padding-top: 10px;
@@ -264,7 +264,7 @@ bottom: 0;
 position: fixed;
 padding-left: 20%;
 }
-@media screen and (max-width:860px) {
+@media screen and (max-width:870px) {
     #h1{
   margin-left: 20%;
   margin-top: 40px;
@@ -280,7 +280,7 @@ padding-left: 20%;
     margin-top: 10px;
 }
 .form input{
-    width: 180px;
+    width: 190px;
     height: 40px;
     margin: 1px;
 }
@@ -292,9 +292,9 @@ padding-left: 20%;
     margin-left: 12px;
 }
 .message textarea{
-    height: 160px;
-    width: 160px;
-    margin-top: 2px;
+    height: 140px;
+    width: 170px;
+    margin-top: 1px;
  }
  .form button{
     width: 90px;
@@ -396,194 +396,44 @@ nav input{
 
 /* blog page
 ================================================================================ */
-#art{
-    padding-left: 45%;
-    font-size: 30px;
-    padding-top: 10px;
-}
 
-.gridholder{
-    display: flex;
-    flex-direction: row;
-    padding-left: 20%;
-    margin-top: 40px;
-}
-.row1 {
-  font-size: 20px;
-  background-color: white;
-  border-radius: 10px;
-}
-.row1 p{
-    padding: 10px 20px 10px 20px;
-}
-#jpeg{
-    width: 425px;
-}
-.row2{
-    font-size: 20px;
-    margin-left: 40px;
-    background-color: white;
-    border-radius: 10px;
-  }
-  .row2 p{
-    padding: 10px 20px 10px 20px;
-}
 
-.subscribe{
-    padding-left: 55%;
-    display: flex;
-    flex-direction: row;
-   
-}
-.subscribe h2{
-    margin-top: 150px;
-}
-.btn5{
-    width: 120px;
-    height: 40px;
-    background-color: black;
-    color: white;
-    border: none;
-   margin-left: 10px;
-   margin-bottom: 10px;
-   cursor: pointer;
-   margin-top:140px;
-}
+/* blogggggggggggg */
 
-.modal-wrapper{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: #24232354 ; 
-    display: none;
-}
-.modal{
+
+
+
+
+
+.indicators{
     position: relative;
-    background: #fff;
-    text-align: center;
-    width: 25rem;
-    margin: 5rem auto;
-    -webkit-box-shadow : 0px 4px 22px -6px rgba(0,0,0,0.75);
-    -moz-box-shadow : 0px 4px 22px  -6px rgba(0,0,0,0.75);
-    box-shadow : 0px 4px 22px  -6px rgba(0,0,0,0.75);
-    animation-name: animatetop;
-    animation-duration: .4s;
 }
-
-
-.modal-show{
-    display: block;
+ .indicator {
+    position: absolute;
+    top: 40%;
+     right: 2%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(214, 210, 210);
 } 
-@keyframes animatetop{
-    from {
-        top : -300px; opacity: 0;
-    }
-    to{
-        top: 0; opacity: 1;
-    }
-}
-.forms input{
-    width: 300px;
-}
-.modal-header{
-    margin-bottom: 1rem;
-    background: #f8fafb;
-    padding: 2rem;
-}
-.modal-body{
-padding: 2rem;
-}  
-.modal-body input{
-    display: flex;
-    flex-direction: column;
-    height: 2.2rem;
-    margin-bottom: 1rem;
-    text-indent: .5rem;
-    outline: none;
-}
+form .indicator {
+    position: absolute;
+    top: 20%;
+    right: 2%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #faf5f5;
+   
+} 
 
-.btn-modal,
-.btn-add,
-.btn-edit,
-.btn-delete{
-    width: 100px;
-    height: 40px;
-    background-color: black;
-    color: white;
-    border: none;
-    cursor: pointer;
+form .indicator.valid{
+    background-image: url(../img/valid.jpg);
+    background-size: cover;
 }
-
-
-@media screen and (max-width:1050px) {
-    .gridholder{
-        padding-left: 5%;
-    }
-    .subscribe{
-        margin-top: 40px;
-    }
-}
-@media screen and (max-width:890px) {
-    
-.row1 {
-    font-size: 15px;
-  }
-  #jpeg{
-      width: 350px;
-  }
-  .row2{
-      font-size: 15px;
-      margin-left: 20px;
-    }
-    .subscribe{
-        padding-left: 30px;
-    }
-    .subscribe h2{
-        font-size: 20px;
-    }
-}
-@media screen and (max-width:750px) {
-    .gridholder{
-        padding-left: 0%;
-        margin-top: 40px;
-    }
-    .row1 {
-        font-size: 12px;
-        padding: 0%;
-      }
-      #jpeg{
-          width: 290px;
-      }
-      .row2{
-          font-size: 12px;
-          padding: 0%;
-          margin-left: 10px;
-        }
-        .subscribe{
-            padding-left: 40px;
-            margin-top: 5px;
-        }
-        .subscribe h2{
-            font-size: 15px;
-            margin-top: 150px;
-        }
-        .btn5{
-            width: 70px;
-            height: 25px;
-           margin-left: 10px;
-           margin-top: 150px;
-        }
-}
-
-.footerblog{
-    display: flex;
-    flex-wrap: initial;
-    background-color:#f5f6f6;;
-    background-color: white;
-    font-size: 20px;
-position:fixed;
-padding-left: 15%;
+form .indicator.invalid{
+    background-image: url(../img/invalid.png);
+    background-size: cover;
 }
 

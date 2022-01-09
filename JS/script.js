@@ -18,3 +18,4 @@ app_fireBase = firebase;
 
 app_fireBase.databaseApi.create(path, data, messageHandler)
 })()
+

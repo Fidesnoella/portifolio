@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/style.css">
-   
-    
+    <link rel="stylesheet" href="./CSS/blog.css"> 
     <title>blog</title>
 </head>
 <body>
@@ -16,98 +14,119 @@
            <ul>
                <li><a href="index.html">Home</a></li>
                <li><a href="about.html">About</a></li>
-               <li><a href="login.html" class="active">Blog</a></li>
+               <li><a href="signup.html" class="active">Blog</a></li>
                <li><a href="contact.html">Contact</a></li>
-               <a href="login.html"><input type="text" placeholder="&nbsp; Let's talk"></a>
-               
+               <a href="signup.html"><input type="text" placeholder="&nbsp; Let's talk"></a>
+                <li><a class="user-name" href="#p" ></a></li> 
            </ul>
        </nav>
     </header>
-
-        <div class="table-wrapper" id="contactForm">
-          <table class="table-users">
-            <tr>
-              <th>Title</th>
-              <th>Description</th>
-              <th>Action</th>
-            </tr>
-          </table>
-          <button class="btn btn-add">Add User</button>
-        </div>
-        <!-- Add Modal -->
-        <div class="add-modal modal-wrapper">
-          <div class="modal">
-            <div class="modal-header"><h3>Add New Article</h3></div>
-            <div class="modal-body">
-              <form class="forms" autocomplete="off">
-                <input type="text" name="title" placeholder="Title">
-                <input type="text" name="description" placeholder="Description">
-                <button class="btn btn-modal">Submit</button>
-              </form>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Edit Modal -->
-        <div class="edit-modal modal-wrapper">
-          <div class="modal">
-            <div class="modal-header"><h3>Edit User</h3></div>
-            <div class="modal-body">
-              <form class="forms" autocomplete="off">
-                <input type="text" name="title" placeholder="Title">
-                <input type="text" name="description" placeholder="Description">
-                <button class="btn btn-modal">Submit</button>
-              </form>
-            </div>
-          </div>
+    <div class="table-wrapper">
+      <table class="table-users">
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Action</th>
+        </tr>
+      </table>
+      <button class="btn btn-add">Add Article</button>
+    </div>
+    <!-- Add Modal -->
+    <div class="add-modal modal-wrapper">
+      <div class="modal">
+        <div class="modal-header"><h3>Add New Article</h3></div>
+        <div class="modal-body">
+          <form class="form" autocomplete="off">
+            <input type="text" name="title" placeholder="Title" >
+            <!-- <input type="text" name="description" placeholder="Description" id="description"> -->
+            <textarea placeholder="Description" rows="10" cols="40" name="description"></textarea>
+            <button class="btn btn-modal">Submit</button>
+          </form>
         </div>
       </div>
+    </div>
 
+    <!-- Edit Modal -->
+    <div class="edit-modal modal-wrapper">
+      <div class="modal">
+        <div class="modal-header"><h3>Edit Article</h3></div>
+        <div class="modal-body">
+          <form class="form" autocomplete="off">
+            <input type="text" name="title" placeholder="Title">
+            <textarea placeholder="Description" rows="10" cols="40" name="description"></textarea>
+            <button class="btn btn-modal">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- <div id="alert">03/01/2019<br>New pen <a target="blank" href="https://codepen.io/joshbivens/pen/rReZpJ">here</a></div> -->
+    <div class="container">
+      <div class="comment-box">
+        <div class="comment-form">
+          <div class="header">Add Your Comment</div>
+          <form>
+            <div> 
+              <input type="text" id="name" placeholder="Name"/>
+            </div>
+            <div>
+              <textarea id="comment" rows="3" cols="30" placeholder="Comment"></textarea>
+            </div>
+            <button type="submit">COMMENT</button>
+          </form>  
+        </div>
+        <div>
+          <h4 class="header">Comments</h4>
+          <div id="comments"></div>
+        </div>
+        <div class="footer"><hr><p>&copy 2016 by Josh Bivens</p></div>
+      </div>
+    </div>
 
+  <button class="btn6" id="logout" >Log out</button>
 
+  <div class="subscribe">
+      <h4>Follow for more</h4>
+     <a href="/Sub_and_Hire/subscribe.html"> <button class="btn5">subscribe</button></a>
+  </div> 
+  
+   <footer class="footerblog">
+      <p>Let's connect</p>
+      <div class="social-icons">
+          <a href="https://www.linkedin.com/in/iragena-fides-noella-634bb3226/"><img src="img/linkedin-icon.png" width="30" height="30"></a>
+          <a href="https://www.twitter.com/fidesnoella/"><img src="img/twitter.png" width="30" height="30"></a>
+          <a href="https://www.instagram.com/fidesnoella/"><img src="img/instagram.png" width="30" height="30"> </a>
+          <a href="https://www.facebook.com/fidesnoella/"><img src="img/facebook-app-symbol.png" width="30" height="30"></a>
+  </div>
+  </footer> 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
 
-     
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>    
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
 
-
-<div class="subscribe">
-    <h2>Follow for more</h2>
-   <a href="/Sub_and_Hire/subscribe.html"> <button class="btn5">subscribe</button></a>
-</div> 
-
- <footer class="footerblog">
-    <p>Let's connect</p>
-    <div class="social-icons">
-        <a href="https://www.linkedin.com/in/iragena-fides-noella-634bb3226/"><img src="img/linkedin-icon.png" width="30" height="30"></a>
-        <a href="https://www.twitter.com/fidesnoella/"><img src="img/twitter.png" width="30" height="30"></a>
-        <a href="https://www.instagram.com/fidesnoella/"><img src="img/instagram.png" width="30" height="30"> </a>
-        <a href="https://www.facebook.com/fidesnoella/"><img src="img/facebook-app-symbol.png" width="30" height="30"></a>
-</div>
-</footer> 
-         
-        <!-- // Import the functions you need from the SDKs you need -->
-        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
-        <!-- // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
-        <script >
-        // Your web app's Firebase configuration
-       var firebaseConfig = {
-          apiKey: "AIzaSyDOlvMm2VN6viYiQcGPX7wEYkh3Wsx4YyQ",
-          authDomain: "portifolio-f94f6.firebaseapp.com",
-          databaseURL: "https://portifolio-f94f6-default-rtdb.firebaseio.com",
-          projectId: "portifolio-f94f6",
-          storageBucket: "portifolio-f94f6.appspot.com",
-          messagingSenderId: "1005477449453",
-          appId: "1:1005477449453:web:9254463eb8b736dbb446e4"
-        };
-      
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore();
-      </script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDOlvMm2VN6viYiQcGPX7wEYkh3Wsx4YyQ",
+  authDomain: "portifolio-f94f6.firebaseapp.com",
+  databaseURL: "https://portifolio-f94f6-default-rtdb.firebaseio.com",
+  projectId: "portifolio-f94f6",
+  storageBucket: "portifolio-f94f6.appspot.com",
+  messagingSenderId: "1005477449453",
+  appId: "1:1005477449453:web:f570ddcf6a29e35bb446e4"
+    };
+    // Initialize Firebase
+    
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    const auth = firebase.auth();
+  </script>
+       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       <script src="./blog/blogfb.js"></script>
-      <script src="./JS/firebase.js"></script>
-      <script src="./JS/main.js"></script>
+
 </body>
 </html>
