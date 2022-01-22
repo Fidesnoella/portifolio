@@ -87,4 +87,27 @@ const loginForm = document.querySelector('#login');
  swal( "Email or password does not exist!", "error occured");
 });
 
+
  })
+
+
+
+const signInWIthGoogleButton = document.getElementById("signInWithGoogle");
+
+const signInWithGoogle = () =>{
+const googleProvider = new firebase.auth.GoogleAuthProvider();
+
+auth.signInWithRedirect(googleProvider)
+.then(()=>{
+  window.location.assign('./blog.html');
+})
+.catch(error =>{
+ console.log(error);
+})
+
+}
+
+signInWIthGoogleButton.addEventListener('click', signInWithGoogle);
+
+
+
