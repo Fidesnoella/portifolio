@@ -20,9 +20,14 @@ const renderUser = doc => {
       <td>${doc.data().title}</td>
       <td>${doc.data().description}</td>
       <td>
+     
+      <td>
         <button class="btn btn-edit">Edit</button>
         <button class="btn btn-delete">Delete</button>
       </td>
+      <tr> <button class="btn btn-comment">Add comment</button></tr>
+      </td>
+      </tr>
     </tr>
   `;
   tableUsers.insertAdjacentHTML('beforeend', tr);
@@ -132,54 +137,52 @@ firebase.auth().onAuthStateChanged((user) =>{
   
   
   
-  
+  // logout a user
   const logout = document.querySelector('#logout');
   logout.addEventListener('click', (e) => {
     e.preventDefault();
     auth.signOut();
     window.location.pathname = "./index.html";
   });
-
-  const ref = new Firebase("https://comments2-d8467.firebaseio.com");
-const form = document.querySelector("form");
-
-form.addEventListener("submit", postComment);
-
-const timeStamp = () => {
-  let options = {
-    month: '2-digit',
-    day: '2-digit',
-    year: '2-digit',
-    hour: '2-digit',
-    minute:'2-digit'
-  };
-  let now = new Date().toLocaleString('en-US', options);
-  return now;
-};
-
-function postComment(e) {
-  e.preventDefault();
-  let name = document.getElementById("name").value;
-  let comment = document.getElementById("comment").value;
-
-  if (name && comment) {
-    ref.push({
-      name: name,
-      comment: comment,
-      time: timeStamp()
+// adding comment to db
+  const form = document.getElementById(`comments`);
+  form.addEventListener(`submit`,(e) =>{
+    e.preventDefault();
+    db.collection(`comments`).add({
+      name: form.name.value,
+      comment: form.comment.value
     });
+    form.name.value = ``;
+    form.comment.value = ``;
+  });
+
+  // Reading comment from db
+
+  const div = document.querySelector(`.cont`);
+  renderList = (doc) =>{
+    var main_div = document.createElement(`div`);
+    var card_body = document.createElement(`div`);
+    var name = document.createElement(`h5`);
+    var comment = document.createElement(`p`);
+    main_div.setAttribute(`class`,`card mt-3`);
+   card_body.setAttribute(`class`,`card-body`);
+    name.setAttribute(`class`,`card-title`);
+    comment.setAttribute(`class`,`card-text`);
+    name.textContent= doc.data().name;
+   comment.textContent= doc.data().comment;
+    card_body.appendChild(name);
+    card_body.appendChild(comment);
+    main_div.appendChild(card_body);
+   div.appendChild(main_div);
   }
+  db.collection(`comments`).onSnapshot(snap =>{
+    let changes = snap.docChanges();
+    changes.forEach(change =>{
+      if (change.type == `added`) {
+        renderList(change.doc);
+  
+      }
+    });
+  });
 
-  document.getElementById("name").value = '';
-  document.getElementById("comment").value = '';
-};
-
-ref.on("child_added", function(snapshot) {
-  let comment = snapshot.val();
-  addComment(comment.name, comment.comment, comment.time);
-});
-
-const addComment = (name, comment, timeStamp) => {
-  let comments = document.getElementById("comments");
-  comments.innerHTML = `<hr><h4>${name} says<span>${timeStamp}</span></h4><p>${comment}</p>${comments.innerHTML}`;
-}
+ 
