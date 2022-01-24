@@ -24,9 +24,15 @@ app.use(`/user`, userRoute);
 app.use(`/articles`, articleRoute);
 app.use(`/contact`, contactRoute);
 
-app.listen(3000, () => console.log(`server running`))
+app.use(`/*`, (req,res) =>{
+    res.status(404).json({
+        status: `fail`,
+        message: `Page Not found`
+    });
+});
 
-// // const PORT = process.env.PORT || 3000
-// // app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
+// app.listen(3000, () => console.log(`server running`))
 
+const PORT = process.env.PORT || 3000
+module.exports = app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
 
