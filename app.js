@@ -25,7 +25,7 @@ app.use(`/articles`, articleRoute);
 app.use(`/contact`, contactRoute);
 
 app.use(`/*`, (req,res) =>{
-    res.status(404).json({
+    res.status(404).json({ 
         status: `fail`,
         message: `Page Not found`
     });
