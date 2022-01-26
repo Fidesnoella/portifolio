@@ -12,6 +12,8 @@ const userSchema = new Schema({
  email : {
     type: String,
     require: true,
+    unique:true,
+    lowercase:true,
     min: 6,
     max: 255
   },
@@ -20,9 +22,20 @@ const userSchema = new Schema({
     require: true,
     min: 6,
     max: 255
+  },
+  Confirm_password :{
+    type: String,
+    require: true,
+    min: 6,
+    max: 255
   }
 
 }, { timestamps: true});
+
+userSchema.post(`save`, function(doc, next){
+  console.log(`New user created`, doc);
+  next();
+})
 
 const Users =  mongoose.model(`Users`, userSchema)
 module.exports =  Users;

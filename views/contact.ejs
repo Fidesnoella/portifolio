@@ -1,0 +1,35 @@
+<%- include(`partials/header`); -%>
+
+<h1 id="h1">GET IN TOUCH</h1>
+<div class="contact">
+    <p class="p1"><img src="img/phone_icon.png" width="20" height="15">+250786744553</p>
+    <p><img src="img/email.png" alt="" width="20" height="15">Email:fniragena@gmail.com</p>
+    <form class="form_contact" id="form" name="form">
+     <div>
+     <div class="form-group  indicators">
+        <input type="text" class="invalid" placeholder="Enter your name" id="names" name="names"><br>
+        <!-- <span class="error"></span> -->
+        <span class="indicator nameInd" id="nameValid"></span>
+        <span id="nameInnerText"></span>
+     </div>
+     <div class="form-group indicators"> 
+        <input type="text" placeholder="Enter your email" id="email" name="email"><br>
+        <span class="indicator " id="emailValid"></span>
+        <span id="emailInnerText"></span>
+     </div>
+     <div class="form-group indicators">
+        <input type="text" placeholder="Enter your phone number" id="phone" name="phone"><br>
+        <span class="indicator " id="phoneValid"></span>
+        <span id="phoneInnerText"></span>
+     </div>
+     <button id="sent" type="submit" sendMessage()>SEND MESSAGE</button>
+  </div>
+        <div class="message" class="form-group indicators">
+        <textarea placeholder="Type your message" id="message" name="message"></textarea>
+        <span class="indicator" id="messageValid"></span>
+        <span id="messageInnerText"></span>
+        </div>
+     
+    </form>
+</div>
+<%- include(`partials/footer`); -%>
