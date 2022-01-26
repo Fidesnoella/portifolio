@@ -5,6 +5,8 @@ const dotenv = require(`dotenv`);
 const contactRoute = require(`./routes/contact`);
 const articleRoute = require(`./routes/article`);
 const userRoute = require(`./routes/user`);
+const cookieParser = require(`cookie-parser`);
+const cors = require(`cors`);
 
 const app = express();
 
@@ -14,15 +16,20 @@ const swaggerUi = require(`swagger-ui-express`);
 
 require("dotenv").config();
 
+app.use(express.json());
 app.use(express.static(`public`));
+app.use(cookieParser());
+app.use(cors())
+
 app.set(`view engine`,`ejs`);
+
+
 // connect to database
 const dbURI= `mongodb+srv://fides:fides123@mybrand.zytgh.mongodb.net/Mybrand?retryWrites=true&w=majority`;
 mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
 .then((result) => console.log(`connected to db`))
 .catch((err) => console.log(err));
 
-app.use(express.json());
 
 
 const swaggerOptions ={

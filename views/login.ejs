@@ -15,7 +15,7 @@
                 <span id="pswdInnerText"></span>
             </div>
            
-            <button class="form__button" type="submit" id="submits" >Sign In</button>
+            <button class="form__button" type="submit">Sign In</button>
             
             <!-- <section class="socialmedia-container">
                 <p>Or Sign In with:</p>
@@ -34,5 +34,18 @@
         <!-- form--hidden -->
     </div>
 </section>
-<script src="../JS/main.js"></script>
 <%- include(`partials/footer`); -%>
+
+<script>
+    const form = document.querySelector(`form`);
+form.addEventListener(`submit`, (e) =>{
+    e.preventDefault();
+
+    // get values
+    const email= form.email.value;
+    const password= form.password.value;
+
+    console.log(email, password);
+})
+
+</script>
