@@ -1,0 +1,372 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color:#f5f6f6;
+    height: 100%;
+}
+/* Home page
+=========================================== */
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    color: black;
+    
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+}
+nav li a:hover{
+    border-bottom: 2px solid #000000;
+}
+nav ul li a {
+    color: black;
+    text-decoration: none;
+   margin: 30px;
+   font-weight: bold;
+   font-size: 20px;
+}
+nav input{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    height: 35px;
+    width: 130px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+}
+/* main */
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.main div{
+    padding-left: 20%;
+    padding-top: 5%;
+}
+.main #p1{
+    font-size: 15px;
+}
+.main #p2{
+    font-size: 20px;
+}
+.main #p3{
+    font-size: 40px;
+    font-weight: bold;
+}
+.main #p4{
+    font-size: 20px;
+   
+}
+#pic{
+    width: 350px;
+    height: 500px;
+}
+ /* Footer  */
+ footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    bottom: 0;
+    /* position: relative; */
+    position: fixed;
+    padding-left: 20%;
+    
+} 
+.social-icons {
+    display: flex;
+ }
+ .social-icons a{
+     width: 30px;
+     height: 30px;
+   justify-content: center;
+   align-items: center;
+  margin: 20px;
+   border-radius: 10%;
+ }
+
+.social-icons a img:hover{
+    background-color: #645c5c;
+    transition: all ease 0.5s;
+}
+footer p{
+    margin-top: 15px;
+}
+
+@media screen and (max-width:750px){
+    header{
+        display: initial;
+        background-color: white;
+    }
+
+nav ul li a {
+   margin: 20px;
+   font-size: 15px;
+}
+nav input{
+    height: 20px;
+    width: 60px;
+    font-size: 10px;
+}
+#pic{
+    width: 300px;
+    height: 400px;
+}
+main div{
+    padding-left: 15%;
+    padding-top: 5%;
+}
+.main #p1{
+    font-size: 10px;
+}
+.main #p2{
+    font-size: 15px;
+}
+.main #p3{
+    font-size: 30px;
+    font-weight: bold;
+}
+.main #p4{
+    font-size: 15px;
+}
+.social-icons a img{
+    width: 20px;
+    height: 20px;
+ margin-top: 10px;
+}
+
+    footer{
+        display: flex;
+        flex-wrap: initial;
+        background-color:#f5f6f6;;
+        font-size: 20px;
+    position:relative;
+    padding-left: 15%;
+    }
+
+   
+}
+/* sign up =====================
+ */
+body{
+    background-color:#f5f6f6;
+   --color-primary : black;
+   --color-secondary: #252c6a;
+   --color-error: #cc3333;
+   --color--success:#4bb544;
+   --border-radius: 5px;
+} 
+#section{
+   margin: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 18px;
+  
+}
+.container{
+    width: 400px;
+   max-width: 400px;
+   margin: 1rem;
+   padding: 2rem;
+   box-shadow: 0 0 10px rgba(0,0,0.1);
+   border-radius: var(--border-radius);
+   background: #ffffff;
+   justify-content: center;
+}
+.login{
+    margin-top: 60px;
+}
+.form--hidden{
+   display: none;
+}
+
+.form > *:first-child{
+   margin-top: 0;
+}
+.form > *:last-child{
+   margin-bottom: 0;
+}
+.form__title{
+   text-align: center;
+   margin-bottom: 1rem;
+   top: 0;
+   font-size: 2rem;
+}
+
+.form__input-group{
+   margin-bottom: 1rem;
+}
+
+
+.form__input{
+   display: block;
+   width: 100%;
+   padding: 0.75rem;
+   box-sizing: border-box;
+   border: 1px solid black;
+   outline: none;
+ 
+}
+
+
+.form__button{
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    background-color: var(--color-primary);
+}
+
+.form__button:hover{
+    background-color: #f5f6f6;
+    color: black;
+ }
+ .form__button:active{
+     transform: scale(0.98);
+ }
+ 
+ .form__text{
+     text-align: center;
+     margin-top: 15px;
+ }
+
+
+ /* contact page 
+===========================================*/
+#h1{
+    margin-left: 40%;
+    margin-top: 40px;
+  }
+  .contact p{
+      padding-left: 40%;
+      font-size: 20px;
+     
+  }
+  .contact .p1{
+      margin-top: 55px;
+  }
+  
+  .form_contact{
+      display: flex;
+      flex-direction: row;
+      padding-left: 30%;
+      margin-top: 10px;
+  }
+ 
+
+  .form_contact input{
+      margin: 5px;
+      border: 1px solid black;
+      width: 280px;
+      height: 40px;
+      padding-left:20px;
+  }
+  .form_contact input:focus{
+      outline: none;
+  }
+  .active{
+     border-bottom: 2px solid black;
+  }
+  .message textarea{
+     margin-top: 5px;
+     height: 140px;
+     width: 280px;
+     padding-left: 20px;
+     padding-top: 10px;
+     border: 1px solid black;
+  }
+  .message textarea:focus{
+      outline: none;
+  }
+  .message #message{
+      display: flex;
+      flex-direction: column;
+  }
+
+  .form_contact button{
+      width: 120px;
+      height: 40px;
+      background-color: black;
+      color: white;
+      margin-left: 200px;
+      margin-top: 10px;
+      border: none;
+  }
+
+  @media screen and (max-width:870px) {
+      #h1{
+    margin-left: 20%;
+    margin-top: 40px;
+    font-size: 30px;
+  }
+  .contact p{
+      padding-left: 9%;
+      font-size: 15px;
+     
+  }
+  .form_contact{
+      padding-left: 7%;
+      margin-top: 10px;
+  }
+  .form_contact input{
+      width: 190px;
+      height: 40px;
+      margin: 1px;
+  }
+  .error {
+      color: #ff3860;
+      font-size: 13px;
+      margin-top: -3px;
+      margin-bottom: 5px;
+      margin-left: 12px;
+  }
+  .message textarea{
+      height: 140px;
+      width: 170px;
+      margin-top: 1px;
+   }
+   .form_contact button{
+      width: 90px;
+      height: 40px;
+      margin-left: 120px;
+      margin-bottom: 20px;
+  }
+  #footer{
+      display: flex;
+      flex-wrap: initial;
+      background-color:#f5f6f6;;
+      font-size: 20px;
+  position:relative;
+  padding-left: 15%;
+  }
+  }
