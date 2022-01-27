@@ -89,7 +89,7 @@ const hashedPassword = await bcrypt.hash(req.body.password, salt);
 const user = new User({
     full_name: req.body.full_name,
     email: req.body.email,
-   s
+    password:hashedPassword
     });
     try{
     const savedUser = await user.save();
