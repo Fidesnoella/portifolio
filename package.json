@@ -33,7 +33,7 @@
   },
   "scripts": {
     "build": "babel app.js -d dist",
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "test": "mocha --timeout=30000"
   },
   "repository": {
