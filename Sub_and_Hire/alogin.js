@@ -1,15 +1,15 @@
-const loginForm = document.querySelector("#login");
+const loginForms = document.querySelector("#adminlogin");
 
 
-loginForm.addEventListener("submit", (e) => {
+loginForms.addEventListener("submit", (e) => {
   e.preventDefault();
-
-  // get user info
+console.log(`hello`)
+  // get  info
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
-  // log the user in
+  
 
-  fetch(`http://localhost:3000/users/login`, {
+  fetch(`http://localhost:3000/admin/login`, {
     method: "POST",
     mode: "cors", // no-cors, *cors, same-origin
     cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -30,14 +30,14 @@ loginForm.addEventListener("submit", (e) => {
     .then(function (data) {
       const token = data.token;
       localStorage.setItem("token", token);
-      loginForm.reset();
+      loginForms.reset();
       setTimeout(() => {
-        window.location.pathname = "./blog.html";
+        window.location.pathname = "./admin.html";
       }, 1000);
     })
     .catch(function (error) {
       localStorage.setItem("token", null);
       console.warn("Something went wrong.", error);
-      swal("Email or password does not exist!", "error occured");
+      swal("Admin only allowed", "error occured");
     });
 });

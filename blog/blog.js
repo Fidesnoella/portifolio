@@ -1,5 +1,4 @@
 
- 
 const postList = document.querySelector(`#posts-list`);
 const addPostForm = document.querySelector(`#add-post-form`);
 const titleValue = document.getElementById(`title-value`);
@@ -16,9 +15,8 @@ const renderArticles = (articles) =>{
       <h5 class="card-title">${article.title}</h5>
       <h6 class="card-subtitle mb-2 text-muted">${article.date}</h6>
       <p class="card-text">${article.body}</p>
-      <a href="#" class="card-link" id="edit-post">Edit</a>
-      <a href="#" class="card-link" id="delete-post">Delete</a>
     </div>
+    <p class="card-admin">Created by Fides Noella</p>
   </div>
     `;
  });

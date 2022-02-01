@@ -18,55 +18,46 @@ document.addEventListener("DOMContentLoaded", () =>{
  
 });
 
+const signupForm = document.getElementById("createAccount");
 
-document.getElementById("createAccount").addEventListener("submit", (e) => {
+signupForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  let names, password1, password2, emails;
+  let names, password1, emails;
   names = document.getElementById("names").value;
   password1 = document.getElementById("password1").value;
-  password2 = document.getElementById("password2").value;
   emails = document.getElementById("emails").value;
   // signupRegister(names, password1, passwordtwo, emails);
+  fetch(`https://noella-atlp.herokuapp.com/users/signup`, {method: "POST",
+  mode: 'cors', // no-cors, *cors, same-origin
+  cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+  credentials: 'same-origin', // include, *same-origin, omit
+  headers: {
+    'Content-Type': 'application/json'
+    // 'Content-Type': 'application/x-www-form-urlencoded',
+  },
 
-  app_firebase
-    .auth()
-    .createUserWithEmailAndPassword(emails, password1)
-    .then((userCredential) => {
-      var user = userCredential.user;
-      console.log("User created");
-      swal("Signed Up!", "Account created!", "success");
-      user.updateProfile({
-        displayName: names,
-      });
-      setTimeout(() => {
-        window.location.pathname = "./signup.html";
-      }, 4000);
-    })
-    .catch((error) => {
-      swal( "Account already exist!", "error");
-    });
+  body: JSON.stringify({full_name: names, email: emails, password: password1})
+
+  })
+     
+  .then(function (response) {
+    if (response.ok) {
+      return Promise.resolve(response.json());
+    }
+    return Promise.reject(response);
+  })
+  .then(function (data) {
+    console.log(data)
+    signupForm.reset();
+    setTimeout(() => {
+      window.location.pathname = "./signup.html";
+    }, 1000);
+  })
+  .catch(function (error) {
+    console.warn("Something went wrong.", error);
+    swal("Error", "error occured");
+  });
 });
-
-// var con = firebase.database().ref('userInfo');
-
-// form.addEventListener('submit', e => {
-
-//   var userInfo = con.push();
-//   userInfo.set({
-//    name: getId("names"),
-//    email: getId("emails"),
-//   });
-
-//   document.getElementById("createAccount").reset();
-
- 
- 
-// }); 
-// function getId(id){
-//   return document.getElementById(id).value;
-// }
-
-
 
 
 
