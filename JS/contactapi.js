@@ -12,7 +12,7 @@ console.log(`hello`);
    
   
 
-  fetch(`http://localhost:3000/contact/contactInfo`, {
+  fetch(`https://noella-atlp.herokuapp.com/contact/contactInfo`, {
     method: "POST",
     mode: "cors", // no-cors, *cors, same-origin
     cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached

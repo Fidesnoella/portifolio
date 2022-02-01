@@ -9,7 +9,7 @@ console.log(`hello`)
   var password = document.getElementById("password").value;
   
 
-  fetch(`http://localhost:3000/admin/login`, {
+  fetch(`https://noella-atlp.herokuapp.com/admin/login`, {
     method: "POST",
     mode: "cors", // no-cors, *cors, same-origin
     cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
