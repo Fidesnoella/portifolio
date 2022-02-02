@@ -27,6 +27,7 @@ const renderArticles = (articles) =>{
 
 const url= `https://noella-atlp.herokuapp.com/article`;
 
+// const url= `http://localhost:3000/article`;
 
 // get Articles
 fetch(url)
@@ -72,7 +73,7 @@ btnSubmit.addEventListener(`click`, (e) =>{
       'Content-Type' :'application/json'
     },
     body: JSON.stringify({
-    title:  titleValue.value ,
+    title: titleValue.value,
     body: bodyValue.value
     })
   })
@@ -82,11 +83,10 @@ btnSubmit.addEventListener(`click`, (e) =>{
 });
 
 // Create new article
-addPostForm.addEventListener(`submit`, (e) =>{
+addPostForm.addEventListener('submit', (e) =>{
   e.preventDefault();
-  
   fetch(url, {
-    method: `POST`,
+    method: 'POST',
     headers: {
       'Content-Type' :'application/json'
     },
@@ -104,5 +104,4 @@ body: JSON.stringify({
 // reset input field
 titleValue.value ='';
 bodyValue.value= '';
-
-})
+});
