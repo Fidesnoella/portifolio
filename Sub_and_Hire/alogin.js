@@ -1,5 +1,18 @@
 const loginForms = document.querySelector("#adminlogin");
 
+const resolvePathname = (path) => {
+  let host = window.location.host;
+  let local = "127.0.0.1";
+  let gitHost = "fidesnoella.github.io";
+  if (host.startsWith(local)) {
+    return path;
+  } else if (host.startsWith(gitHost)) {
+    let newPath = "/portifolio" + path;
+    return newPath;
+  } else {
+    return path;
+  }
+};
 
 loginForms.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -32,7 +45,7 @@ console.log(`hello`)
       localStorage.setItem("token", token);
       loginForms.reset();
       setTimeout(() => {
-        window.location.pathname = "./admin.html";
+        window.location.pathname = resolvePathname("/admin.html");
       }, 1000);
     })
     .catch(function (error) {
